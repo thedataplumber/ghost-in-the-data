@@ -15,7 +15,7 @@ I use this theme on my [blog](http://thedataplumber.net), so you can take a look
 - Disqus Comments
 - Follow me updates
 - A few more icons
-- Yourls integration (in the fork for the moment)
+- Yourls integration (in the Yourls branch for the moment)
 - A couple of other minor tweaks that suited me
 
 ### Replace icon
