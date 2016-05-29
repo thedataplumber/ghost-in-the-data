@@ -1,0 +1,21 @@
+{
+  "name": "Ghost In The Data",
+  "version": "1.0.0",
+  "description": "Ghost blog theme by thedataplumber",
+  "bugs": {
+    "url": "",
+    "email": "hello@thedataplumber.net"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "thedataplumber",
+    "email": "hello@thedataplumber.net",
+    "url": "http://thedataplumber.net"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thedataplumber/ghost-in-the-data"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

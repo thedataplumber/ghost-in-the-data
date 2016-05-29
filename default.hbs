@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <title>{{meta_title}}</title>
+  <meta name="description" content="{{meta_description}}" />
+  {{!-- icon  --}}
+  <link rel="icon" sizes="192x192" href=" {{asset "img/icon.png"}}" />
+  <link href='//fonts.googleapis.com/css?family=Roboto:500,400italic,300,300italic,700,500italic,400' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Fira+Mono' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{asset "css/style.min.css"}}">
+  {{! Ghost outputs important style and meta data with this tag }}
+  {{ghost_head}}
+</head>
+<body>
+  <div class="landing">
+  {{!-- Add Header --}}
+  {{> "header"}}
+  {{!-- Add Content Body --}}
+  {{{body}}}
+  {{!-- Add footer --}}
+  {{> "footer"}}
+  </div>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  {{! Ghost outputs important scripts and data with this tag }}
+  {{ghost_foot}}
+  <script src="{{asset "js/vendor.min.js"}}"></script>
+  <script src="{{asset "js/app.min.js"}}"></script>
+  <!-- Ghost External Links Script -->
+  <script src="/assets/js/ghost-external-links.js"></script>
+  <!-- Disqus Script -->
+  <script id="dsq-count-scr" src="//thedataplumber.disqus.com/count.js" async></script> //Replace PAGE_URL with your disqus link
+  <!-- Mailchimp Script -->
+  <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
+  <script>
+  function showMailingPopUp() {
+      require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us13.list-manage.com","uuid":"eda43b976d5f649c1c94ddf6d","lid":"2984314fb9"}) })
+      document.cookie = "MCEvilPopupClosed=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+  };
+
+  document.getElementById("open-popup").onclick = function() {showMailingPopUp()};
+  </script>
+</body>
+</html>

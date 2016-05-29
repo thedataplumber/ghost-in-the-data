@@ -1,0 +1,22 @@
+{{!-- Add Layout --}}
+{{!< default}}
+{{#author}}
+<header class="godo-cover {{#if cover}}cover" style="background-image: url({{cover}}){{/if}}">
+  <article class="godo-cover-wrap">
+    {{!-- Avatar author --}}
+    <img  class="godo-cover-avatar animated bounceInDown" src="{{#if image}}{{image}}{{else}}{{asset "img/user-image.png"}}{{/if}}" alt="{{name}}" />
+    {{!-- Author name --}}
+    <h1 class="godo-cover-title animated bounceIn">{{name}}</h1>
+    {{!-- Author description --}}
+    <p class="godo-cover-description" itemprop="description">{{bio}}</p>
+    {{!-- Author location website --}}
+    <div class="godo-cover-meta">
+      {{#if location}}<div class="location"><span class="icon-location">{{location}}</span></div>{{/if}}
+      {{#if website}}<a class="website btn" href="{{website}}"><i class="icon-link"></i> WebSite</a>{{/if}}
+      <div class="number-post">{{plural ../pagination.total empty='No Posts' singular='% Post' plural='% Posts'}} <i class="icon-feed"></i></div>
+    </div>
+  </article>
+</header>
+{{/author}}
+{{!-- Add Loop --}}
+{{> "loop"}}
